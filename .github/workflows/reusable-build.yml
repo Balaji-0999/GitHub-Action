@@ -1,15 +1,15 @@
 name: Reusable Build Workflow
 
-on: 
+on:
   workflow_call:
     inputs:
       app_name:
         type: string
         required: true
-    environment:
-      type: string
-      required: true
-      default: staging
+      environment:
+        type: string
+        required: true
+        default: staging
     secrets:
       docker_token:
         required: true
@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Print build info
-        run: echo "Build ${{ inputs.app_name }}" for ${{ inputs.environment }}
+        run: echo "Building ${{ inputs.app_name }} for ${{ inputs.environment }}"
 
       - name: Check secret
         run: |
