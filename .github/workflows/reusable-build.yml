@@ -21,7 +21,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    version: ${{ steps.set-version.outputs.version }}
+    outputs:
+     version: ${{ steps.set-version.outputs.version }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
