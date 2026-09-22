@@ -1,0 +1,16 @@
+name: Smart Triggers - Source Changes
+
+on:
+  push:
+    branches:
+      - main
+      - 'release/*'
+    paths:
+      - 'src/**'
+      - 'app/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Source code changed, running build..."
