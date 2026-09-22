@@ -1,5 +1,5 @@
 name: "Setup and Greet"
-description: "Print a "greeting, data, and OS info
+description: "Print a greeting, data, and OS info"
 
 inputs:
   name:
