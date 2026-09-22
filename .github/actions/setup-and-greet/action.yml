@@ -24,6 +24,12 @@ runs:
         else
           echo "Hello, ${{ inputs.name}}!"
         fi
+    - name: Print date and OS
+      shell: bash
+      run: |
+        echo "Date: $(date)"
+        echo "Runner OS: ${{ runner.os }}"
+
 
     - name: Set output
       id: set-output
