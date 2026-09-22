@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Use composite action
-        uses: ./.github/action/setup-and-greet
+        uses: ./.github/actions/setup-and-greet
         with:
           name: "Bala Ji"
           language: "hi"
