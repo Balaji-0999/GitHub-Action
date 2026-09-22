@@ -11,7 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print which schedule triggered
-        run: echo "Triggered by schedule: ${{ github.event.schedule }}"
+        run: |
+          echo "Triggered by schedule: ${{ github.event.schedule }}"
 
       - name: Health check
         run: |
